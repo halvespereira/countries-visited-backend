@@ -1,0 +1,26 @@
+{
+  "name": "countries-visited-backend",
+  "description": "backend for web app countris visited",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "aws-sdk": "^2.1202.0"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.89",
+    "@types/node": "^17.0.8",
+    "@types/uuid4": "^2.0.0",
+    "jest": "^26.6.3",
+    "typescript": "^4.5.4"
+  },
+  "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "local": "npm run build && sam build --use-container && sam local start-api",
+    "deploy": "npm run build && sam deploy"
+  },
+  "files": [
+    "dist/"
+  ]
+}
